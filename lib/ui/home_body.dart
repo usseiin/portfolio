@@ -1,25 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ussein_portfolio/enum/menu.dart';
-import 'package:ussein_portfolio/provider/app_state.dart';
-import 'package:ussein_portfolio/ui/about_page.dart';
-import 'package:ussein_portfolio/ui/project_page.dart';
 
 import '../constants/app_color.dart';
-import 'component/side_drawer.dart';
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: HomeAppBar(),
-      body: HomeBody(),
-      drawer: HomeSideDrawer(),
-    );
-  }
-}
+import '../enum/menu.dart';
+import '../provider/app_state.dart';
+import 'about_page.dart';
+import 'project_page.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
