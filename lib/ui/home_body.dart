@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../enum/enum.dart';
 import '../constants/app_color.dart';
-import '../enum/menu.dart';
 import '../provider/app_state.dart';
-import 'about_page.dart';
-import 'project_page.dart';
+import '../ui/component/narrow_side_widget.dart';
+import 'about.dart';
+import 'component/wide_side_widget.dart';
+import 'project.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
@@ -40,13 +42,21 @@ class _HomeBodyState extends ConsumerState<HomeBody> {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(20),
-        child: menu == Menu.about
-            ? const AboutPage()
-            : menu == Menu.project
-                ? const ProjectPage()
-                : Column(
-                    children: const [],
-                  ),
+        child: Row(
+          children: [
+            if (menu == DeviceType.medium) const NarrowSideWidget(),
+            if (menu == DeviceType.expanded) const WideSideWidget(),
+            Expanded(
+              child: menu == Menu.about
+                  ? const About()
+                  : menu == Menu.project
+                      ? const Project()
+                      : Column(
+                          children: const [],
+                        ),
+            ),
+          ],
+        ),
       ),
     );
   }

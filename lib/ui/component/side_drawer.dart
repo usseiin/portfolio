@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ussein_portfolio/constants/app_string.dart';
-import 'package:ussein_portfolio/models/profile.dart';
 
+import '../../constants/app_string.dart';
 import '../../enum/menu.dart';
+import '../../models/profile.dart';
 import '../../provider/app_state.dart';
 
 class HomeSideDrawer extends StatelessWidget {
