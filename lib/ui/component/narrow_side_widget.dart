@@ -19,11 +19,11 @@ class NarrowSideWidget extends StatelessWidget {
           ),
         ],
       ),
-      width: 85,
+      width: 120,
       child: Column(
         children: [
           const SizedBox(
-            height: 65,
+            height: 75,
           ),
           ...menuList
               .map((menu) => Consumer(
@@ -35,7 +35,7 @@ class NarrowSideWidget extends StatelessWidget {
                             onTap: () => {
                               ref.read<AppState>(appState.notifier).update(menu)
                             },
-                            child: Padding(
+                            child: Container(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 16,
                                 vertical: 12,

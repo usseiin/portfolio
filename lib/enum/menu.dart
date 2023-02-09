@@ -1,5 +1,5 @@
 enum Menu {
-  home("Home"),
+  introduction("Introduction"),
   about("About"),
   project("Project");
 

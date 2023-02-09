@@ -7,7 +7,7 @@ import 'package:ussein_portfolio/enum/menu.dart';
 final appState = StateNotifierProvider<AppState, Menu>((ref) => AppState());
 
 class AppState extends StateNotifier<Menu> {
-  AppState() : super(Menu.home);
+  AppState() : super(Menu.introduction);
 
   void update(Menu menu) => state = menu;
 }

@@ -9,13 +9,13 @@ enum DeviceType {
 extension DeviceTypeSize on BuildContext {
   DeviceType deviceTypeFromWidth() => MediaQuery.of(this).size.width <= 600
       ? DeviceType.compact
-      : size!.width <= 840
+      : MediaQuery.of(this).size.width <= 840
           ? DeviceType.medium
           : DeviceType.expanded;
 
   DeviceType deviceTypeFromHeight() => MediaQuery.of(this).size.height <= 480
       ? DeviceType.compact
-      : size!.width <= 900
+      : MediaQuery.of(this).size.width <= 900
           ? DeviceType.medium
           : DeviceType.expanded;
 }

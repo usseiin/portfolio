@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'enum/enum.dart';
 import 'ui/home.dart';
+import 'ui/themes/themes.dart';
 
 void main() {
   runApp(const ProviderScope(child: App()));
@@ -13,14 +13,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final deviceType = context.deviceTypeFromWidth();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: appTheme,
       darkTheme: ThemeData(),
-      home: Home(
-        deviceType: deviceType,
-      ),
+      home: const Home(),
     );
   }
 }
