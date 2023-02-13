@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'ui/home.dart';
 import 'ui/themes/themes.dart';
 
-void main() {
+void main() async {
   runApp(const ProviderScope(child: App()));
 }
 

@@ -12,6 +12,7 @@ class HomeSideDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      // width: 180,
       child: ListView(
         children: [
           const AppDrawerHeader(),
@@ -23,12 +24,18 @@ class HomeSideDrawer extends StatelessWidget {
                           ref.read<AppState>(appState.notifier).update(menu),
                           Navigator.pop(context)
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                          child: Text(menu.title),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 12,
+                              ),
+                              child: Text(menu.title),
+                            ),
+                            const Divider(),
+                          ],
                         ),
                       );
                     },
@@ -55,12 +62,13 @@ class AppDrawerHeader extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            myProfile.firstName,
+            myProfile.firstName + myProfile.lastName,
             style: const TextStyle(fontSize: 20),
           ),
-          Text(
-            myProfile.lastName,
-            style: const TextStyle(fontSize: 20),
+          const SizedBox(height: 12),
+          const Text(
+            "Mobile Developer",
+            style: TextStyle(fontSize: 18),
           ),
         ],
       ),
