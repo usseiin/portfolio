@@ -7,10 +7,9 @@ import '../enum/enum.dart';
 import '../constants/app_color.dart';
 import '../provider/app_state.dart';
 import '../ui/component/narrow_side_widget.dart';
-import 'about.dart';
 import 'component/wide_side_widget.dart';
 import 'home_content.dart';
-import 'project.dart';
+import 'project_page.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
@@ -81,11 +80,9 @@ class _HomeBodyState extends ConsumerState<AppBody> {
           if (deviceType == DeviceType.medium) const NarrowSideWidget(),
           if (deviceType == DeviceType.expanded) const WideSideWidget(),
           Expanded(
-            child: menu == Menu.about
-                ? const About()
-                : menu == Menu.project
-                    ? const Project()
-                    : const HomeContent(),
+            child: menu == Menu.project
+                ? const ProjectPage()
+                : const HomeContent(),
           ),
         ],
       ),

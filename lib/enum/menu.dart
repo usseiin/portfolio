@@ -1,6 +1,5 @@
 enum Menu {
   introduction("Introduction"),
-  about("About"),
   project("Project");
 
   final String title;
