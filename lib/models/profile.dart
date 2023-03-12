@@ -29,10 +29,3 @@ var myProfile = const Profile(
     "github": "https://github.com/usseiin",
   },
 );
-
-// class Social {
-//   final String name;
-//   final String link;
-
-//   Social(this.name, this.link);
-// }

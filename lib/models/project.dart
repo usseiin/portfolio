@@ -23,4 +23,10 @@ var projects = <Project>[
     description: "flutter app that allow fiat and crypto payment",
     language: PLanguage.flutter,
   ),
+  Project(
+    image: "${imagePath}chekout_1.png",
+    name: "ChekOut",
+    description: "flutter app that allow fiat and crypto payment",
+    language: PLanguage.flutter,
+  ),
 ];

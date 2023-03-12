@@ -5,7 +5,3 @@ enum Menu {
   final String title;
   const Menu(this.title);
 }
-
-String menuValueToString(Menu value) {
-  return value.title;
-}
