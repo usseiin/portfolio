@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../constants/app_string.dart';
 import 'app_logic.dart';
 import 'app_side_bar.dart';
 import 'home_body.dart';
@@ -29,7 +30,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final logic = AppLogic();
     return AppBar(
-      title: const Text("Home"),
+      title:
+          SizedBox(height: 65, child: Image.asset("${imagePath}logo_uc.png")),
       actions: [
         IconButton(
           onPressed: () {

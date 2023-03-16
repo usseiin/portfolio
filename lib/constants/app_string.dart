@@ -1,6 +1,6 @@
 const profilePicture = "profile_picture.png";
 
-const imagePath = "images/";
+const imagePath = "assets/images/";
 
 const introduction =
     "I'm a mobile developer base in Lagos, Nigeria. I am a passionate and experienced mobile app engineer specializing in Flutter and Jetpack Compose. I have experience in developing high-quality, user-friendly mobile applications that solve real-world problems. Whether it's creating a new app from scratch or improving an existing one, I am committed to delivering exceptional results";
