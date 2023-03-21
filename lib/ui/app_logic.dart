@@ -31,6 +31,6 @@ class AppLogic {
   }
 
   void toLinkedin() {
-    _launchInBrowser(Uri.parse("https://linkedin.com/in/kehindehassanbh"));
+    _launchInBrowser(Uri.parse("https://www.linkedin.com/in/kehindehassanbh"));
   }
 }
