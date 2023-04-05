@@ -22,15 +22,15 @@ class AppLogic {
     }
   }
 
-  void toTwitter() {
-    _launchInBrowser(Uri.parse("https://twitter.com/_usseiin"));
+  void goToTwitter() {
+    _launchInBrowser(Uri.parse("https://www.twitter.com/_usseiin"));
   }
 
-  void toGithub() {
-    _launchInBrowser(Uri.parse("https://github.com/usseiin"));
+  void goToGithub() {
+    _launchInBrowser(Uri.parse("https://www.github.com/usseiin"));
   }
 
-  void toLinkedin() {
-    _launchInBrowser(Uri.parse("https://www.linkedin.com/in/kehindehassanbh"));
+  void goToLinkedin() {
+    _launchInBrowser(Uri.parse("https://www.linkedin.com/in/hassankehindebh/"));
   }
 }

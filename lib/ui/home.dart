@@ -35,19 +35,19 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () {
-            logic.toGithub();
+            logic.goToGithub();
           },
           icon: const FaIcon(FontAwesomeIcons.github),
         ),
         IconButton(
           onPressed: () {
-            logic.toLinkedin();
+            logic.goToLinkedin();
           },
           icon: const FaIcon(FontAwesomeIcons.linkedin),
         ),
         IconButton(
           onPressed: () {
-            logic.toTwitter();
+            logic.goToTwitter();
           },
           icon: const FaIcon(FontAwesomeIcons.twitter),
         ),
